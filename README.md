@@ -18,6 +18,11 @@ cd us-states-game
 
 ## To run the App 
 
+### Install dependencies
+```
+pip3 install -r requirements.txt 
+```
+### Run the code
 ```
 python3 main.py
 ```

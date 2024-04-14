@@ -3,7 +3,7 @@ import pandas
 
 screen = turtle.Screen()
 screen.title("U.S States Game")
-image = "../assets/images/blank_states_img.gif"
+image = "assets/images/blank_states_img.gif"
 screen.addshape(image)
 
 turtle.shape(image)
@@ -14,7 +14,7 @@ state_text.hideturtle()
 
 game_over = False
 
-data = pandas.read_csv("../assets/files/50_states.csv")
+data = pandas.read_csv("assets/files/50_states.csv")
 state_list = data.state.to_list()
 guessed_states = []
 score = 0
@@ -44,7 +44,7 @@ while not game_over:
 if score < 50:
     states_to_learn = [state for state in state_list if state not in guessed_states]
     df = pandas.DataFrame.from_dict(states_to_learn)
-    df.to_csv("states_to_learn.csv")
+    df.to_csv("assets/files/states_to_learn.csv")
 
 
 
